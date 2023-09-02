@@ -1,0 +1,41 @@
+.mat-toolbar {
+    background-color: #1976d2; /* Change to your preferred background color */
+  }
+  
+  .logo-title {
+    display: flex;
+    align-items: center;
+    margin-right: 16px; /* Add some spacing between logo and title */
+  }
+  
+  .logo {
+    width: 120px;
+    height: 40px;
+    margin-right: 8px;
+    padding: 10px 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: white; 
+  }
+  
+  .right-buttons {
+    margin-left: auto;
+  }
+  
+  /* Style the buttons */
+  .cart-button {
+    color: white;
+    vertical-align: middle;
+  }
+  
+  .login-button,
+  .logout-button,
+  .register-button {
+    color: white; /* Button text color */
+    margin-left: 8px;
+    font-size: 20px;
+
+  }
+  
