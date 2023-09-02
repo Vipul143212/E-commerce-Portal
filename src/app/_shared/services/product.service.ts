@@ -13,4 +13,8 @@ export class ProductService {
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+  getProductById(productId: number): Observable<any> {
+    const productUrl = `${this.apiUrl}/${productId}`;
+    return this.http.get(productUrl);
+  }
 }
