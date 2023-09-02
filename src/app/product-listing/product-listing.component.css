@@ -62,3 +62,36 @@
     color: white !important;
     border-radius: 10px !important;
   }
+
+  .filter-sort-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .filter-sort-container form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filter-sort-container select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .filter-sort-container label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .filter-sort-container select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }

@@ -11,6 +11,8 @@ export class ProductItemComponent {
   
   onProductClick() {
     this.productSelected.emit(this.product); 
+    
+    
   }
   addToCart(product: any) {
     //console.log
