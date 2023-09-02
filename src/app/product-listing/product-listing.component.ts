@@ -8,6 +8,7 @@ import { ProductService } from '../_shared/services/product.service';
 })
 export class ProductListingComponent implements OnInit {
   products!: any[];
+  selectedProduct: any;
 
   constructor(private productService: ProductService) {}
 
@@ -16,8 +17,7 @@ export class ProductListingComponent implements OnInit {
       this.products = data;
     });
   }
-  addToCart(product: any) {
-    //this.cartService.addToCart(product);
-    // You can add a message or notification here if needed
+  onProductSelected(product: any) {
+    this.selectedProduct = product; 
   }
 }

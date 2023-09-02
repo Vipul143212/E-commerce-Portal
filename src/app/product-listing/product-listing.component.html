@@ -1,19 +1,8 @@
-<div class="product-list">
+  <div class="product-list">
     <div class="product-item" *ngFor="let product of products">
-      <a [routerLink]="['/product', product.id]" class="product-link">
-        <mat-card class="product-card">
-          <mat-card-header>
-            <mat-card-title class="product-title">{{ product.title }}</mat-card-title>
-          </mat-card-header>
-          <img mat-card-image [src]="product.image" alt="{{ product.title }}" class="product-image">
-          <mat-card-content class="product-content">
-            <p class="product-description">{{ product.description }}</p>
-            <p class="product-price">Price: ${{ product.price }}</p>
-          </mat-card-content>
-          <mat-card-actions class="product-actions">
-            <button mat-button custom (click)="addToCart(product)">Add to Cart</button>
-          </mat-card-actions>
-        </mat-card>
-      </a>
+      <app-product-item
+        [product]="product"
+        (productSelected)="onProductSelected($event)"
+      ></app-product-item>
     </div>
   </div>
