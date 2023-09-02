@@ -1,0 +1,32 @@
+<div class="registration-container">
+    <h2>Register</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username">
+        <div *ngIf="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched">
+          <div class="error-message" *ngIf="registrationForm.get('username')?.hasError('required')">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password">
+        <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched">
+          <div class="error-message" *ngIf="registrationForm.get('password')?.hasError('required')">Password is required</div>
+          <div class="error-message" *ngIf="registrationForm.get('password')?.hasError('minlength')">Password must be at least 6 characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword">
+        <div *ngIf="registrationForm.get('confirmPassword')?.touched">
+          <div class="error-message" *ngIf="registrationForm.hasError('passwordMismatch')">Passwords do not match</div>
+          <div class="error-message" *ngIf="registrationForm.get('confirmPassword')?.hasError('required')">Confirm Password is required</div>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn-register" [disabled]="registrationForm.invalid">Register</button>
+      <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </form>
+  </div>
+  

@@ -7,12 +7,12 @@
   
     <!-- Right side: Cart, Login, Logout, Register buttons -->
     <div class="right-buttons">
-      <button mat-icon-button class="cart-button">
-        <mat-icon>shopping_cart</mat-icon>
-      </button>
-      <button mat-button class="login-button">Login</button>
-      <button mat-button class="logout-button">Logout</button>
-      <button mat-button class="register-button">Register</button>
+        <button mat-icon-button class="cart-button" (click)="goToCartPage()">
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+    <button mat-button class="login-button" (click)="goToLoginPage()">Login</button>
+    <button mat-button class="logout-button" (click)="logout()">Logout</button>
+    <button mat-button class="register-button" (click)="goToRegisterPage()">Register</button>
     </div>
   </mat-toolbar>
   
